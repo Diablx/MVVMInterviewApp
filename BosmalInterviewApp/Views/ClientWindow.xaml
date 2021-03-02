@@ -19,18 +19,17 @@
             </Grid.ColumnDefinitions>
             <WrapPanel Grid.Column="1" VerticalAlignment="Top" Margin="10">
                 <TextBlock Text="Firstname: "/>
-                <TextBox Height="25" Width="150" Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged, Delay=250}"/>
+                <TextBox Height="25" Width="150" Text=""/>
             </WrapPanel>
-            <DataGrid ItemsSource="{Binding People, UpdateSourceTrigger=PropertyChanged}" 
-                      SelectedItem="{Binding SelectedPerson}"  
+            <DataGrid ItemsSource="{Binding People, UpdateSourceTrigger=PropertyChanged}"
                       Margin="10" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
             <StackPanel Grid.Row="1" Grid.RowSpan="3">
                 <TextBlock Text="FirstName:"/>
-                <TextBox Text="{Binding SelectedPerson.FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox Text=""/>
                 <TextBlock Text="LastName:"/>
-                <TextBox Text="{Binding SelectedPerson.LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox Text=""/>
                 <TextBlock Text="Age:"/>
-                <TextBox Text="{Binding SelectedPerson.Age, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox Text=""/>
             </StackPanel>
         </Grid>
     </Grid>

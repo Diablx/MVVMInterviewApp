@@ -9,6 +9,6 @@ namespace BosmalInterviewApp.Logic.PeopleRepository
     {
         ICollection<BosmalPerson> GetPeople();
         BosmalPerson GetPersonByID(int id);
-        ICollection<BosmalPerson> Filter(string age);
+        ICollection<BosmalPerson> Filter(string name);
     }
 }

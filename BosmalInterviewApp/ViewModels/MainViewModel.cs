@@ -40,7 +40,6 @@ namespace BosmalInterviewApp.ViewModels
                     _filterName = value;
                     People = _peopleRepository.Filter(FilterName);
                 }
-                OnPropertyChanged(nameof(FilterName));
             }
         }
 
