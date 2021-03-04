@@ -17,10 +17,22 @@ namespace BosmalInterviewApp.ViewModels
             People = _peopleRepository.GetPeople();
         }
 
-        public IEnumerable<BosmalPerson> _people;
-        public IEnumerable<BosmalPerson> People;
+        public IEnumerable<BosmalPerson> _people { get; private set; }
+        public IEnumerable<BosmalPerson> People
+        {
+            get => _people;
+            set
+            {
+                if (_people != value)
+                {
+                    _people = value;
+                }
+                OnPropertyChanged(nameof(People));
+            }
+                
+        }
 
-        public string _filterName;
+        public string _filterName { get; set; }
 
         public string FilterName
         {
@@ -48,5 +60,6 @@ namespace BosmalInterviewApp.ViewModels
                 OnPropertyChanged(nameof(SelectedPerson));
             }
         }
+
     }
 }

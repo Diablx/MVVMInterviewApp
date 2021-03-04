@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BosmalInterviewApp.Views"
         mc:Ignorable="d"
-        Title="ClientWindow" Height="450" Width="800">
+        Title="AddressBook" Height="450" Width="800">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -19,17 +19,17 @@
             </Grid.ColumnDefinitions>
             <WrapPanel Grid.Column="1" VerticalAlignment="Top" Margin="10">
                 <TextBlock Text="Firstname: "/>
-                <TextBox Height="25" Width="150" Text=""/>
+                <TextBox Height="25" Width="150" Text="{Binding FilterName, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"/>
             </WrapPanel>
-            <DataGrid ItemsSource="{Binding People, UpdateSourceTrigger=PropertyChanged}"
+            <DataGrid x:Name="DG" ItemsSource="{Binding People, UpdateSourceTrigger=PropertyChanged}"
                       Margin="10" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
             <StackPanel Grid.Row="1" Grid.RowSpan="3">
                 <TextBlock Text="FirstName:"/>
-                <TextBox Text=""/>
+                <TextBox Text="{Binding ElementName=DG,Path=SelectedItem.FirstName}"/>
                 <TextBlock Text="LastName:"/>
-                <TextBox Text=""/>
+                <TextBox Text="{Binding LastName}"/>
                 <TextBlock Text="Age:"/>
-                <TextBox Text=""/>
+                <TextBox Text="{Binding Age}"/>
             </StackPanel>
         </Grid>
     </Grid>
