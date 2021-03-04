@@ -31,7 +31,7 @@ namespace BosmalInterviewApp.Logic.PeopleRepository
         /// <summary>
         /// Get People from fake db
         /// </summary>
-        /// <returns></returns>
+        /// <returns>collection of BosmalPerson</returns>
         public ICollection<BosmalPerson> GetPeople()
         {
             return people;

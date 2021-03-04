@@ -18,16 +18,8 @@ namespace BosmalInterviewApp.ViewModels
         }
 
         public IEnumerable<BosmalPerson> _people;
-        public IEnumerable<BosmalPerson> People 
-        {
-            get => _people;
-            set
-            {
-                if (_people != value)
-                    _people = value;
-                OnPropertyChanged(nameof(People));
-            }
-        }
+        public IEnumerable<BosmalPerson> People;
+
         public string _filterName;
 
         public string FilterName
