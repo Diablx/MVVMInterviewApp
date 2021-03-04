@@ -36,15 +36,5 @@ namespace BosmalInterviewApp.Logic.PeopleRepository
         {
             return people;
         }
-
-        /// <summary>
-        /// Get person by id from collection
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public BosmalPerson GetPersonByID(int id)
-        {
-            return people.Where(p => p.Pesel == id).FirstOrDefault();
-        }
     }
 }
